@@ -1,0 +1,6 @@
+name = "cloudflare-workers-CockroachDB"
+compatibility_date = "2023-12-01"
+
+# [vars]
+# DATABASE_URL=""
+# DIRECT_URL=""

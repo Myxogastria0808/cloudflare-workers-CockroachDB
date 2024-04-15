@@ -1,0 +1,27 @@
+{
+    "name": "cloudflare-workers-CockroachDB",
+    "version": "1.0.0",
+    "main": "src/index.ts",
+    "repository": "https://github.com/Myxogastria0808/cloudflare-workers-CockroachDB",
+    "author": "'Myxogastria0808' <r.rstudio.c@gmail.com>",
+    "license": "WTFPL",
+    "scripts": {
+        "dev:hono": "wrangler dev src/index.ts",
+        "deploy": "wrangler deploy --minify src/index.ts",
+        "dev:prisma": "ts-node-dev --project /orm/tsconfig.json /orm/src/index.ts",
+        "studio": "prisma studio --hostname \"127.0.0.2\"",
+        "migrate": "prisma migrate dev --name init && prisma generate"
+    },
+    "dependencies": {
+        "@prisma/client": "^5.12.1",
+        "@types/node": "^20.12.7",
+        "hono": "^4.2.3",
+        "prisma": "^5.12.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.4.5"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20240403.0",
+        "wrangler": "^3.47.0"
+    }
+}

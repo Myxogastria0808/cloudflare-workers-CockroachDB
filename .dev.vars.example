@@ -1,0 +1,5 @@
+#prisma://~ を書く
+DATABASE_URL=
+
+#postgresql://~ を書く
+DIRECT_URL=
