@@ -12,7 +12,7 @@ DataBase: CockroachDB
 
 # Setup
 
-## 1. 以下のコマンドを実行
+## 1. 以下のコマンドを実行し、ファイルの内容も以下のようにする
 
 ```shell
 yarn create hono
@@ -175,11 +175,11 @@ URL: https://console.prisma.io/
 
 4. New Project を押す
 
-5. 控えていたデータベース URL を入力
+5. 控えていたデータベース URL (postgresql://~) を入力
 
 6. Enable Accelerate を押す
 
-7. API KEY を控えておく
+7. prisma://~ を控えておく
 
 8. `prisma/prisma.schema`
 
@@ -195,14 +195,7 @@ datasource db {
 }
 ```
 
-9. `.dev.vars`
-
-```text
-DATABASE_URL=
-DIRECT_URL=
-```
-
-10. `wrangler.toml`
+9. `wrangler.toml`
 
 > [!CAUTION]
 > GitHub に push する際は、必ず`wrangler.toml`の`[vars]`の情報をすべて消してから push してください。
@@ -215,7 +208,7 @@ DATABASE_URL=""
 DIRECT_URL=""
 ```
 
-11. `.env`
+10. `.env`
 
 ```env
 # Environment variables declared in this file are automatically made available to Prisma.
@@ -232,7 +225,7 @@ DIRECT_URL=
 
 ```
 
-12. `.dev.vars`
+11. `.dev.vars`
 
 ```dev.vars
 #prisma://~ を書く
